@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Módulo 18: estructura semántica main > section > form -->
   <main class="form-page">
     <section class="form-section">
       <div class="form-container">
@@ -21,8 +20,6 @@
         </header>
 
         <form class="contact-form" action="#" method="post">
-
-          <!-- Módulo 5, 15, 17: datos personales -->
           <section class="form-block">
             <h2>Datos personales</h2>
 
@@ -48,7 +45,6 @@
               </div>
             </div>
 
-            <!-- Módulo 15: datalist -->
             <div class="form-field">
               <label for="ciudad">Ciudad</label>
               <input type="text" id="ciudad" name="ciudad" list="ciudades" placeholder="Escriba o seleccione una ciudad">
@@ -62,7 +58,6 @@
             </div>
           </section>
 
-          <!-- Módulo 6, 8, 9, 17, 31: organización -->
           <section class="form-block">
             <h2>Organización</h2>
 
@@ -78,27 +73,23 @@
             </div>
 
             <div class="form-grid">
-              <!-- Módulo 31: readonly -->
               <div class="form-field">
                 <label for="pais">País</label>
                 <input type="text" id="pais" name="pais" value="Colombia" readonly aria-describedby="pais-help">
                 <small id="pais-help" class="field-help">Por ahora solo atendemos clientes en Colombia.</small>
               </div>
-              <!-- Módulo 31: disabled -->
               <div class="form-field">
                 <label for="plan">Plan asignado</label>
                 <input type="text" id="plan" name="plan" value="Se define tras el diagnóstico" disabled>
               </div>
             </div>
 
-            <!-- Módulo 17: pattern -->
             <div class="form-field">
               <label for="referido">Código de referido</label>
               <input type="text" id="referido" name="referido" pattern="[A-Z]{3}-[0-9]{4}" placeholder="ABC-1234" title="Tres letras mayúsculas, un guion y cuatro números" aria-describedby="referido-help">
               <small id="referido-help" class="field-help">Opcional. Formato: ABC-1234.</small>
             </div>
 
-            <!-- Módulo 8, 9: select + optgroup -->
             <div class="form-field">
               <label for="servicio">Servicio de interés <span class="required-mark" aria-hidden="true">*</span></label>
               <select id="servicio" name="servicio" required>
@@ -117,7 +108,6 @@
             </div>
           </section>
 
-          <!-- Módulo 7, 14: disponibilidad -->
           <section class="form-block">
             <h2>Disponibilidad</h2>
 
@@ -138,7 +128,6 @@
             </div>
           </section>
 
-          <!-- Módulo 10, 26: radio buttons -->
           <fieldset>
             <legend>Modalidad de contacto</legend>
             <div class="choice-list">
@@ -157,7 +146,6 @@
             </div>
           </fieldset>
 
-          <!-- Módulo 11, 26: checkboxes -->
           <fieldset>
             <legend>Temas adicionales de interés</legend>
             <div class="choice-list">
@@ -176,27 +164,23 @@
             </div>
           </fieldset>
 
-          <!-- Módulo 12: textarea -->
           <div class="form-field">
             <label for="mensaje">Describa su necesidad <span class="required-mark" aria-hidden="true">*</span></label>
             <textarea id="mensaje" name="mensaje" rows="6" maxlength="1200" placeholder="Cuéntenos brevemente qué necesita..." aria-describedby="mensaje-help" required></textarea>
             <small id="mensaje-help" class="field-help">Máximo 1200 caracteres.</small>
           </div>
 
-          <!-- Módulo 13: file -->
           <div class="form-field">
             <label for="archivo">Documento de soporte</label>
             <input type="file" id="archivo" name="archivo" accept=".pdf,.doc,.docx,.xlsx" aria-describedby="archivo-help">
             <small id="archivo-help" class="field-help">Formatos sugeridos: PDF, Word o Excel.</small>
           </div>
 
-          <!-- Módulo 11: checkbox obligatorio de términos -->
           <label class="choice">
             <input type="checkbox" name="terminos" required>
             <span>Acepto el tratamiento de la información suministrada.</span>
           </label>
 
-          <!-- Módulo 16, 28: botones -->
           <div class="form-actions">
             <button type="submit" class="button button-primary">Enviar solicitud</button>
             <button type="reset" class="button button-secondary">Limpiar</button>
