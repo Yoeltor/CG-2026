@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3 · Encuesta de satisfacción</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ejercicio3-encuesta.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="card-header">
+        <span class="eyebrow">Encuesta</span>
+        <h1>Cuéntanos tu experiencia</h1>
+        <p>Tu opinión nos ayuda a mejorar el servicio.</p>
+      </header>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>¿Cómo califica el servicio recibido? <span class="required-mark">*</span></legend>
+          <div class="choice-list">
+            <label class="choice">
+              <input type="radio" name="calificacion" value="excelente" checked>
+              <span>Excelente</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="calificacion" value="bueno">
+              <span>Bueno</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="calificacion" value="regular">
+              <span>Regular</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="calificacion" value="malo">
+              <span>Malo</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>¿Qué aspectos le gustaron?</legend>
+          <div class="choice-list">
+            <label class="choice">
+              <input type="checkbox" name="aspectos" value="atencion">
+              <span>Atención al cliente</span>
+            </label>
+            <label class="choice">
+              <input type="checkbox" name="aspectos" value="tiempos">
+              <span>Tiempos de respuesta</span>
+            </label>
+            <label class="choice">
+              <input type="checkbox" name="aspectos" value="precio">
+              <span>Relación precio-calidad</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="recomendacion">Probabilidad de recomendarnos (1 a 10)</label>
+          <input type="range" id="recomendacion" name="recomendacion" min="1" max="10" value="8">
+        </div>
+
+        <div class="field">
+          <label for="comentario">Comentario adicional</label>
+          <textarea id="comentario" name="comentario" rows="4" maxlength="400" placeholder="Cuéntanos más..."></textarea>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="button button-primary">Enviar encuesta</button>
+          <button type="reset" class="button button-secondary">Limpiar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

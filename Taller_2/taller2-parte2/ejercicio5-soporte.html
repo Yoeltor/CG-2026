@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 5 · Ticket de soporte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ejercicio5-soporte.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="card-header">
+        <span class="eyebrow">Soporte</span>
+        <h1>Abre un ticket de soporte</h1>
+        <p>Los campos con <span class="required-mark">*</span> son obligatorios.</p>
+      </header>
+
+      <form action="#" method="post">
+        <div class="field">
+          <label for="asunto">Asunto <span class="required-mark">*</span></label>
+          <input type="text" id="asunto" name="asunto" placeholder="Ej. No puedo iniciar sesión" required>
+        </div>
+
+        <div class="field">
+          <label for="prioridad">Prioridad <span class="required-mark">*</span></label>
+          <select id="prioridad" name="prioridad" required>
+            <option value="" selected disabled>Seleccione la prioridad</option>
+            <option value="baja">Baja</option>
+            <option value="media">Media</option>
+            <option value="alta">Alta</option>
+            <option value="urgente">Urgente</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="descripcion">Descripción del problema <span class="required-mark">*</span></label>
+          <textarea id="descripcion" name="descripcion" rows="6" maxlength="1000" placeholder="Describe qué sucedió, cuándo y qué esperabas que pasara..." required></textarea>
+          <small class="help">Máximo 1000 caracteres.</small>
+        </div>
+
+        <div class="field">
+          <label for="adjunto">Adjuntar evidencia</label>
+          <input type="file" id="adjunto" name="adjunto" accept="image/*,.pdf" aria-describedby="adjunto-help">
+          <small id="adjunto-help" class="help">Capturas de pantalla o PDF.</small>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="button button-primary">Enviar ticket</button>
+          <button type="reset" class="button button-secondary">Limpiar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

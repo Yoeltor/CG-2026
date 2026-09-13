@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 4 · Solicitud laboral</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ejercicio4-solicitud-laboral.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="card-header">
+        <span class="eyebrow">Vacantes</span>
+        <h1>Postúlate a una vacante</h1>
+        <p>Los campos con <span class="required-mark">*</span> son obligatorios.</p>
+      </header>
+
+      <form action="#" method="post">
+        <div class="grid">
+          <div class="field">
+            <label for="nombre">Nombre completo <span class="required-mark">*</span></label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="correo">Correo <span class="required-mark">*</span></label>
+            <input type="email" id="correo" name="correo" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="field">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="puesto">Puesto de interés <span class="required-mark">*</span></label>
+            <select id="puesto" name="puesto" required>
+              <option value="" selected disabled>Seleccione un puesto</option>
+              <option value="frontend">Desarrollador Frontend</option>
+              <option value="backend">Desarrollador Backend</option>
+              <option value="qa">Analista QA</option>
+              <option value="soporte">Soporte Técnico</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="cv">Hoja de vida (CV) <span class="required-mark">*</span></label>
+          <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" aria-describedby="cv-help" required>
+          <small id="cv-help" class="help">Formatos aceptados: PDF o Word. Máximo 5 MB.</small>
+        </div>
+
+        <div class="field">
+          <label for="carta">Carta de presentación</label>
+          <textarea id="carta" name="carta" rows="5" maxlength="800" placeholder="Cuéntanos por qué te interesa esta vacante..."></textarea>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="button button-primary">Enviar postulación</button>
+          <button type="reset" class="button button-secondary">Limpiar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
